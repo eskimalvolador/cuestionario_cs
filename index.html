@@ -608,6 +608,64 @@
     line-height: 1.7;
   }
 
+  /* ── TEXTAREAS ── */
+  .textarea-block {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .textarea-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .textarea-label .centro-tag {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    background: rgba(217,95,43,0.08);
+    border: 1px solid rgba(217,95,43,0.18);
+    border-radius: 4px;
+    padding: 2px 8px;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  .email-textarea {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: var(--text);
+    background: #fafbfd;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    width: 100%;
+    resize: vertical;
+    min-height: 140px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    outline: none;
+  }
+
+  .email-textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(217,95,43,0.08);
+  }
+
+  .email-textarea::placeholder {
+    color: #b0b8cc;
+    font-style: italic;
+  }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 720px) {
     .drag-layout { grid-template-columns: 1fr; }
@@ -786,8 +844,24 @@
         </div>
       </div>
 
+      <div class="q-card" style="flex-direction: column; align-items: stretch;">
+        <div style="display:flex; gap:18px; align-items:flex-start;">
+          <div class="q-num">3</div>
+          <div class="q-content">
+            <h3>Redacta un email</h3>
+            <p>Imagina que tienes que contactar con Estrellitas por correo electrónico. Redacta el mensaje que les enviarías.</p>
+          </div>
+        </div>
+        <div class="textarea-block">
+          <div>
+            <div class="textarea-label">Para: <span class="centro-tag">Estrellitas · Murcia</span></div>
+            <textarea class="email-textarea" style="min-height:200px;" placeholder="Asunto: …&#10;&#10;Hola [nombre],&#10;&#10;"></textarea>
+          </div>
+        </div>
+      </div>
+
       <div class="q-card">
-        <div class="q-num">3</div>
+        <div class="q-num">4</div>
         <div class="q-content">
           <h3>Un caso especial</h3>
           <p>Centro Infantil Luna (Sevilla) lleva 6 semanas sin que nadie acceda a la plataforma, pero no tiene ninguna incidencia abierta. ¿Qué hipótesis te planteas para explicar esta situación? ¿Cómo lo abordarías?</p>
@@ -795,7 +869,7 @@
       </div>
 
       <div class="q-card">
-        <div class="q-num">4</div>
+        <div class="q-num">5</div>
         <div class="q-content">
           <h3>Lo que no harías</h3>
           <p>¿Hay algún centro en el que no actuarías esta semana? ¿Por qué?</p>
@@ -803,7 +877,7 @@
       </div>
 
       <div class="q-card">
-        <div class="q-num">5</div>
+        <div class="q-num">6</div>
         <div class="q-content">
           <h3>Lo que te falta saber</h3>
           <p>Mirando estos datos, ¿qué información adicional te gustaría tener? ¿Qué cambiaría tu análisis o tus decisiones si la tuvieras?</p>
